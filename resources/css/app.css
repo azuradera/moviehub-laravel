@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.card-hover{
+
+    transition:.3s;
+
+}
+
+.card-hover:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+}
+
+.btn-red{
+
+    background:#E50914;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.btn-red:hover{
+
+    background:#ff2a35;
+
+    transform:scale(1.03);
+
+}
+
+.sidebar-item{
+
+    display:block;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+}
+
+.sidebar-item:hover{
+
+    background:#E50914;
+
+}
+.glass{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:20px;
+
+}
+
+
+.fade-in{
+
+    animation:fade .5s;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
