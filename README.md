@@ -1,58 +1,210 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎬 MovieHub
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+MovieHub adalah aplikasi berbasis web yang dikembangkan menggunakan **Laravel 13** untuk mengelola data film. Aplikasi ini memiliki sistem autentikasi, dashboard, manajemen film, manajemen pengguna berdasarkan role, upload poster, serta fitur export data ke PDF dan Excel.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# ✨ Fitur
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 🔐 Login & Register
+- 📊 Dashboard
+- 🎬 CRUD Data Film
+- 🖼️ Upload Poster Film
+- 👥 Role Admin & User
+- 👤 Manajemen User (Admin)
+- 📄 Export PDF
+- 📊 Export Excel
+- 🌐 REST API
+- 🎨 UI Modern dengan Tailwind CSS
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+# 🛠️ Teknologi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Laravel 13
+- PHP 8.x
+- MySQL
+- Laravel Breeze
+- Blade
+- Tailwind CSS
+- DomPDF
+- Laravel Excel
+- JavaScript
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+# 👤 Hak Akses
 
-## Agentic Development
+## Admin
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+- Login
+- Dashboard
+- CRUD Film
+- Upload Poster
+- Kelola User
+- Export PDF
+- Export Excel
+- REST API
+
+## User
+
+- Login
+- Dashboard
+- Melihat Daftar Film
+- Detail Film
+- Export PDF
+- Export Excel
+- REST API
+
+---
+
+# 🚀 Instalasi
+
+Clone repository
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/USERNAME/moviehub.git
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Masuk ke folder project
 
-## Contributing
+```bash
+cd moviehub
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Install dependency
 
-## Code of Conduct
+```bash
+composer install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Install package frontend
 
-## Security Vulnerabilities
+```bash
+npm install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Copy file environment
 
-## License
+```bash
+cp .env.example .env
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Generate application key
+
+```bash
+php artisan key:generate
+```
+
+Atur konfigurasi database pada file `.env`
+
+Jalankan migrasi
+
+```bash
+php artisan migrate
+```
+
+Buat storage link
+
+```bash
+php artisan storage:link
+```
+
+Jalankan aplikasi
+
+```bash
+php artisan serve
+```
+
+Compile asset
+
+```bash
+npm run dev
+```
+
+---
+
+# 📡 REST API
+
+| Method | Endpoint | Deskripsi |
+|---------|----------|-----------|
+| GET | /api/films | Menampilkan seluruh data film |
+| GET | /api/films/{id} | Menampilkan detail film |
+| POST | /api/films | Menambahkan data film |
+| PUT | /api/films/{id} | Mengubah data film |
+| DELETE | /api/films/{id} | Menghapus data film |
+
+---
+
+# 📷 Screenshot
+
+## Landing Page
+
+<img src="screenshot/landing.png" width="900">
+
+---
+
+## Login
+
+<img src="screenshot/login.png" width="900">
+
+---
+
+## Register
+
+<img src="screenshot/register.png" width="900">
+
+---
+
+## Dashboard
+
+<img src="screenshot/dashboard.png" width="900">
+
+---
+
+## Data Film
+
+<img src="screenshot/film.png" width="900">
+
+---
+
+## User Management
+
+<img src="screenshot/user.png" width="900">
+
+---
+
+## REST API (Postman)
+
+<img src="screenshot/post.png" width="900">
+
+---
+
+# 📁 Struktur Folder
+
+```
+app/
+bootstrap/
+config/
+database/
+public/
+resources/
+routes/
+storage/
+```
+
+---
+
+# 👨‍💻 Developer
+
+**Nama :** Bayu Samudera
+
+**Program Studi :** Informatika
+
+**Framework :** Laravel 13
+
+---
+
+# 📄 Lisensi
+
+Project ini dibuat sebagai tugas mata kuliah **Pemrograman Web Framework** menggunakan Laravel 13.
